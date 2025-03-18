@@ -48,7 +48,7 @@ const card = api => {
             <div class="col">
                 <a href="page.html?name=${item.name}" class="text-decoration-none cursor-pointer">
                     <article class="card shadow-sm border-0 h-100">
-                        <img src="${item.flag}" class="card-img-top" alt="${item.name}">
+                        <img src="${item.flag}" class="card-img-top" alt="flag_${item.name}" fetchpriority="high" loading="lazy">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title mb-3">${item.name}</h5>
                             <p class="mb-1 fs-6"><strong>Population:</strong> ${item.population ? item.population.toLocaleString('en-US') : 'N/A'}</p>
@@ -95,7 +95,7 @@ const search = api => {
     api.forEach(item => {
         content += `
             <div class="col-12 col-lg-5 col-md-5">
-                <img src="${item.flag}" class="img-fluid" alt="${item.name}" loading="lazy">
+                <img src="${item.flag}" class="img-fluid" alt="flag_${item.name}" fetchpriority="high" loading="lazy">
             </div>
             <div class="col-12 col-lg-7 col-md-7">
                 <h2 class="fs-4 fw-bold mb-4">${item.name}</h2>
