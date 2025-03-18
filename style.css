@@ -144,6 +144,13 @@ body.dark-mode .btn i {
     cursor: pointer;
 }
 
+.card-img-top {
+    width: 100%;
+    height: auto; 
+    aspect-ratio: 3 / 2;
+}
+  
+
 .card-title{
     color: var(--color-primary) !important;
     font-weight: 800;
