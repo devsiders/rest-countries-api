@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    --bg-background: hsl(0, 0%, 98%);
+    --color-primary: hsl(200, 15%, 8%);
+    --color-secondary: hsl(209, 23%, 22%);
+    --color-text: hsl(0, 0%, 52%);
+    --bg-color: hsl(0, 0%, 100%);
+    --bg-card: hsl(0, 0%, 100%);
+    --bg-input: hsl(0, 0%, 100%);
+    --input-text-color: hsl(200, 15%, 8%);
+}
+
+body.dark-mode{
+    --bg-background: hsl(207, 26%, 17%);
+    --color-primary: hsl(0, 0%, 100%);
+    --color-secondary: hsl(0, 0%, 100%);
+    --bg-color: hsl(209, 23%, 22%);
+    --bg-card: hsl(209, 23%, 22%);
+    --bg-input: hsl(209, 23%, 22%);
+    --input-text-color: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--bg-background);
+    font-family: "Nunito Sans", sans-serif;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+header{
+    background-color: var(--bg-color);
+}
+
+h2{
+    color: var(--color-primary);
+}
+
+p{
+    color: var(--color-text);
+    font-weight: 300;
+}
+
+strong{
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.navbar-brand{
+    pointer-events: none;
+    color: var(--color-primary) !important;
+}
+
+.btn{
+    color: var(--color-primary);
+    --bs-btn-border-width: none;
+    transition: background-color 0.4s, color 0.4s, transform 0.3s;
+}
+
+.btn:hover {
+    color: var(--color-primary) !important; 
+}
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn i {
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+body.dark-mode .btn i {
+    transform: rotate(180deg);
+}
+
+.btn-primary{
+    background-color: var(--bg-input);
+    color: var(--input-text-color);
+    padding: .5rem 2rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--input-text-color) !important;
+    color: var(--bg-input) !important;
+}
+
+.group-input {
+    position: relative;
+}
+
+.group-input .form-control {
+    padding-left: 2.5rem; 
+}
+
+.group-input-text{
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    z-index: 10;
+    color: var(--color-text);
+}
+
+.form-control{
+    background-color: var(--bg-input);
+    border: none;
+    color: var(--input-text-color);
+    padding: .75rem;
+}
+
+.form-control::placeholder{
+    color: var(--color-text);
+}
+
+.form-control:focus{
+    background-color: var(--bg-input) !important;
+    color: var(--input-text-color);
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-select{
+    background-color: var(--bg-input);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23848484' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    border: none;
+    color: var(--color-secondary) !important;
+    padding: .75rem;
+    outline: 1px solid var(--bg-color);
+}
+
+.form-select:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.card{
+    background-color: var(--bg-card);
+    cursor: pointer;
+}
+
+.card-title{
+    color: var(--color-primary) !important;
+    font-weight: 800;
+}
+
+.badge{
+    background-color: var(--bg-input);
+    color: var(--color-text);
+}
+
