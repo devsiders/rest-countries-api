@@ -102,15 +102,15 @@ const search = api => {
                 <div class="row">
                     <div class="col-12 col-lg-6 col-md-6">
                         <p class="mb-2"><strong>Native Name:</strong> ${item.nativeName}</p>
-                        <p class="mb-2"><strong>Population:</strong> ${item.population ? item.population.toLocaleString('en-US') : 'N/A'}</p>
+                        <p class="mb-2"><strong>Population:</strong> ${item.population ? item.population.toLocaleString('en-US') : ''}</p>
                         <p class="mb-2"><strong>Region:</strong> ${item.region}</p>
                         <p class="mb-2"><strong>Sub Region:</strong> ${item.subregion}</p>
                         <p><strong>Capital:</strong> ${item.capital}</p>
                     </div>
                     <div class="col-12 col-lg-6 col-md-6">
                         <p class="mb-2"><strong>Top Level Domain:</strong> ${item.topLevelDomain}</p>
-                        <p class="mb-2"><strong>Currencies:</strong> ${item.currencies ? Object.values(item.currencies).map(c => c.name).join(', ') : 'N/A'}</p>
-                        <p><strong>Languages:</strong> ${item.languages ? item.languages.map(lang => lang.name).join(', ') : 'N/A'}</p>
+                        <p class="mb-2"><strong>Currencies:</strong> ${item.currencies ? Object.values(item.currencies).map(c => c.name).join(', ') : ''}</p>
+                        <p><strong>Languages:</strong> ${item.languages ? item.languages.map(lang => lang.name).join(', ') : ''}</p>
                     </div>
                 </div>
                 <div>
@@ -119,7 +119,7 @@ const search = api => {
                             <p><strong>Border Countries:</strong></p>
                         </div>
                         <div class="col-12 col-lg-6 col-md-10">
-                            ${item.borders ? item.borders.map(border => `<span class="badge pt-2 pb-2 pe-3 ps-3 me-1 mb-1 shadow-sm">${border}</span>`).join(' ') : 'N/A'}
+                            ${item.borders ? item.borders.map(border => `<span class="badge pt-2 pb-2 pe-3 ps-3 me-1 mb-1 shadow-sm">${border}</span>`).join(' ') : ''}
                         </div>
                     </div>
                 </div>
